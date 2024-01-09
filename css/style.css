@@ -550,6 +550,7 @@ textarea {
     @media only screen and (max-width: 37.5em) {
       .header__links {
         display: none; } }
+
   .header__link {
     padding: 2.2rem 3rem;
     display: inline-block;
@@ -559,8 +560,18 @@ textarea {
     letter-spacing: 1px;
     font-weight: 700;
     transition: color .3s; }
-    .header__link:hover {
-      color: #11283d; }
+    .header__link::after {
+      color: #5e8db8;
+      content: "";
+      width: 0%;
+      height: 2px;
+      background: rgb(52, 124, 206);
+      display: block;
+      margin: auto;
+      transition: 0.5s; }
+      .header__link:hover::after{
+          width: 100%;
+      } 
     @media only screen and (max-width: 56.25em) {
       .header__link {
         padding: 3rem 1.8rem;
@@ -703,7 +714,14 @@ textarea {
     border-radius: 50%;
     opacity: 1;
     animation: wheel 1.3s infinite;
-    -webkit-animation: wheel 1.3s infinite; }
+    -webkit-animation: wheel 1.3s infinite; 
+    transition : transform 0.3s ease-in-out;}
+    .mouse:hover{
+      /* transform: scale(1.1); */
+      transform: rotate(10deg);
+      /* transform: rotate(-10deg); */
+    }
+    
 
 @keyframes wheel {
   to {
@@ -714,3 +732,17 @@ textarea {
   to {
     opacity: 0;
     top: 27px; } }
+::-webkit-scrollbar{
+      background: transparent;
+      width: 7px;
+     
+    }
+    ::-webkit-scrollbar-thumb{
+      
+      background:linear-gradient(transparent,rgb(38, 119, 211)) ;
+      
+      border-radius: 9px;
+    }
+    ::-webkit-scrollbar-thumb:hover{
+    background:linear-gradient(transparent,rgb(38, 119, 211));
+    }

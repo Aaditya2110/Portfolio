@@ -618,7 +618,7 @@ textarea {
     letter-spacing: 2px;
     transition: color .3s; }
     .header__sm-menu-link a:hover {
-      color: #11283d; }
+      color: #f7f7f7; }
   .header__sm-menu-link:first-child a {
     border-top: 1px solid #eee; }
   .header__sm-menu-link-last {
@@ -746,3 +746,31 @@ textarea {
     ::-webkit-scrollbar-thumb:hover{
     background:linear-gradient(transparent,rgb(38, 119, 211));
     }
+    .home-hero {
+      color: #eee;
+      width: 100%;
+      background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+        url(new.jpg);
+      background-position: center;
+      background-size: cover;
+      position: relative;
+      min-height: 100vh;
+    }
+    
+    .header {
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+      color: #fff;
+      background: transparent; /* Change background to transparent */
+      box-shadow: none; /* Remove the box shadow */
+    }
+    .header.opaque {
+      background: #000; /* Change the background color to your desired opaque color */
+      box-shadow: 0 10px 100px rgba(0, 0, 0, 0.1); /* Add back the box shadow */
+    }
+    .header__link,
+    .header__logo-sub {
+      color: #fffc; /* Change this to white */
+    }
+    

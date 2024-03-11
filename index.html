@@ -394,5 +394,19 @@
     </footer>
 
     <script src="./index.js"></script>
+        <script>
+      // JavaScript to toggle opaque class on header when scrolling
+    window.addEventListener('scroll', function() {
+      var header = document.querySelector('.header');
+      var scrollPosition = window.scrollY;
+
+      if (scrollPosition > 0) {
+        header.classList.add('opaque');
+      } else {
+        header.classList.remove('opaque');
+      }
+    });
+
+    </script>
   </body>
 </html>
